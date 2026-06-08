@@ -67,6 +67,9 @@ zenithcache/
     ├── EventLoop.cpp
     ├── Server.cpp
     └── Connection.cpp
+
+```
+
 🛠️ Building and Running
 Prerequisites
 Linux OS or Windows Subsystem for Linux (WSL)
