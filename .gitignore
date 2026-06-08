@@ -1,0 +1,22 @@
+# Pré-compilados e Binários
+build/
+bin/
+obj/
+*.out
+*.exe
+zenithcache
+
+# Ficheiros de Configuração de IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs e Profiling
+*.log
+valgrind*.txt
+gmon.out
+
+# Sistema Operativo
+.DS_Store
+Thumbs.db
