@@ -81,7 +81,6 @@ CMake 3.22+
 Compilation Steps
 Compile the project with full production optimization flags (-O3) and strict error checking (-Werror):
 
-Bash
 # 1. Create and navigate to the build directory
 mkdir build && cd build
 
@@ -90,22 +89,24 @@ cmake ..
 
 # 3. Compile the executable
 make
+
 Running the Server
 Launch the compiled binary:
 
-Bash
-./zenithcache
+./zenithcach
+
 🧪 Verification & Testing
 1. Concurrency and Input Sanitization
 You can stress-test the connection engine using Netcat. In a separate terminal window, execute:
 
-Bash
 nc localhost 6379
+
 Type any payload or hit Enter. The server’s zero-allocation parsing layer automatically discards empty packets (\r\n or spaces) and securely processes valid commands.
 
 2. Memory Leak Analysis (Valgrind)
+
 ZenithCache is rigorously profile-tested to ensure zero runtime leaks. To verify memory cleanliness:
 
-Bash
 valgrind --leak-check=full --show-leak-kinds=all ./zenithcache
+
 Expected Result: All heap blocks were freed -- no leaks are possible.
